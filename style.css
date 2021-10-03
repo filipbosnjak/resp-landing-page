@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 8vh;
+  width: 100%;
+}
+
+.nav .logo {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+  color: aliceblue;
+  -webkit-filter: drop-shadow(1px 5px 3px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(1px 5px 3px rgba(0, 0, 0, 0.5));
+}
+
+.nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav .menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.nav .menu .list .item {
+  margin: 20px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.nav .menu .list .item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.nav .menu .list .item a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+  -webkit-filter: drop-shadow(5px 5px 3px black);
+          filter: drop-shadow(5px 5px 3px black);
+}
+
+.nav .navToggler {
+  display: none;
+}
+
+.beaches {
+  height: 100vh;
+  position: relative;
+  color: aliceblue;
+}
+
+.beaches .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.beaches .container {
+  position: relative;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 0.25fr;
+      grid-template-columns: 2fr 0.25fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 60%;
+  margin: 0 auto;
+  top: 30vh;
+}
+
+.beaches .data h2 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+.beaches .data h1 {
+  font-size: 110px;
+}
+
+.beaches .data p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.beaches .data .button {
+  background: aliceblue;
+  width: 130px;
+  height: 60px;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.beaches .data .button a {
+  text-decoration: none;
+  color: #0099ff;
+  font-weight: 500;
+}
+
+.beaches .data .button i {
+  color: #0099ff;
+  font-size: 20px;
+}
+
+.controls {
+  position: absolute;
+  left: calc(100vw * 0.4);
+  bottom: 100px;
+  border-radius: 15px;
+  width: 160px;
+  height: 70px;
+}
+
+.controls .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 230px;
+  height: 70px;
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+
+.controls .container .img {
+  width: 35px;
+  height: 35px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.controls .container .swiper-slide-thumb-active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    position: relative;
+    -webkit-transition: all 10s ease-in-out;
+    transition: all 10s ease-in-out;
+  }
+  .nav .logo {
+    margin-right: 40px;
+  }
+  .nav .menu {
+    top: 10px;
+    width: 60vw;
+    height: 40vh;
+    background-color: rgba(240, 248, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    position: absolute;
+    top: 10px;
+    left: calc(100vw * 0.2);
+    z-index: 99999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .nav .menu .list {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav .menu .list .item {
+    -webkit-box-shadow: 5px 1px 10px rgba(19, 13, 13, 0.4);
+            box-shadow: 5px 1px 10px rgba(19, 13, 13, 0.4);
+    padding: 15px;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    border-radius: 7px;
+    background-color: aliceblue;
+    margin: 10px;
+  }
+  .nav .menu .list .item:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .nav .menu .list .item a {
+    -webkit-filter: drop-shadow(2px 1px 20px black);
+            filter: drop-shadow(2px 1px 20px black);
+    color: #0099ff;
+  }
+  .nav .show-menu {
+    opacity: 1;
+    top: 80px;
+    left: calc(100vw * 0.2);
+  }
+  .nav .navToggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav .navToggler i {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 25px;
+    color: aliceblue;
+  }
+  .beaches .container {
+    width: 100%;
+    margin-left: 40px;
+    top: 25vh;
+  }
+  .beaches .data h1 {
+    font-size: 95px;
+  }
+  .controls {
+    left: calc(100vw * 0.28);
+    background-color: aliceblue;
+    bottom: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
